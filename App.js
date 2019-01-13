@@ -8,7 +8,7 @@ export default class App extends Component {
     modal: {
       visible: false,
       title: "Modal title",
-      subTitle: "Modal subTitle",
+      subtitle: "Modal subtitle",
       buttons: this.createButtons()
     }
   }
@@ -35,7 +35,7 @@ export default class App extends Component {
       modal: {
         visible: true,
         title: "Modal title",
-        subTitle: "Modal subTitle",
+        subtitle: "Modal subtitle",
         buttons: this.createButtons()
       }
     })
@@ -55,7 +55,7 @@ export default class App extends Component {
       <Modalzin
         visible={this.state.modal.visible}
         title={this.state.modal.title}
-        subTitle={this.state.modal.subTitle}
+        subtitle={this.state.modal.subtitle}
         buttons={this.state.modal.buttons}
         onClick={(key) => this.functionOnModalClose(key)}
       />
