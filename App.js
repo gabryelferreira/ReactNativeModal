@@ -43,7 +43,7 @@ export default class App extends Component {
 
   createButtons(){
     let buttons = [
-      {key: "BEST", text: "BEST button", color: '#27ae60', fontWeight: 'bold'},
+      {key: "BEST", text: "Best button", color: '#27ae60', fontWeight: 'bold'},
       {key: "WORST", text: "Not a good button"}
     ];
     return buttons;
