@@ -42,8 +42,8 @@ export default class Modalzin extends Component {
                         this.props.onClose()
                     }}
                     >
-                    <Animated.View style={[styles.inside]}>
-                        <Animated.View style={[styles.modal]}>
+                    <View style={[styles.inside]}>
+                        <View style={[styles.modal]}>
                             <View style={[styles.viewTitle, styles.paddingHorizontal]}>
                                 <Text style={styles.title}>{this.props.title}</Text>
                             </View>
@@ -56,8 +56,8 @@ export default class Modalzin extends Component {
                             </View>
 
 
-                        </Animated.View>
-                    </Animated.View>
+                        </View>
+                    </View>
                 </Modal>
             </View>
         );
