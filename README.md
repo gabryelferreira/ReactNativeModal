@@ -242,7 +242,7 @@ Specifies whether the modal should appear.
 
 A string representing the modal title.
 
-#### `subTitle`
+#### `subtitle`
 
 A string representing the modal subtitle.
 
