@@ -33,33 +33,31 @@ export default class Modalzin extends Component {
 
     render() {
         return (
-            <View >
-                <Modal
-                  animationType="fade"
-                    transparent={true}
-                    visible={this.props.visible}
-                    onRequestClose={() => {
-                        this.props.onClose()
-                    }}
-                    >
-                    <View style={[styles.inside]}>
-                        <View style={[styles.modal]}>
-                            <View style={[styles.viewTitle, styles.paddingHorizontal]}>
-                                <Text style={styles.title}>{this.props.title}</Text>
-                            </View>
-                            <View style={[styles.viewInfo, styles.paddingHorizontal]}>
-                                <Text style={styles.info}>{this.props.subtitle}</Text>
-                            </View>
-
-                            <View style={styles.viewButtons}>
-                                {this.renderButtons()}
-                            </View>
-
-
+            <Modal
+                animationType="fade"
+                transparent={true}
+                visible={this.props.visible}
+                onRequestClose={() => {
+                    this.props.onClose()
+                }}
+                >
+                <View style={[styles.inside]}>
+                    <View style={[styles.modal]}>
+                        <View style={[styles.viewTitle, styles.paddingHorizontal]}>
+                            <Text style={styles.title}>{this.props.title}</Text>
                         </View>
+                        <View style={[styles.viewInfo, styles.paddingHorizontal]}>
+                            <Text style={styles.info}>{this.props.subtitle}</Text>
+                        </View>
+
+                        <View style={styles.viewButtons}>
+                            {this.renderButtons()}
+                        </View>
+
+
                     </View>
-                </Modal>
-            </View>
+                </View>
+            </Modal>
         );
     }
 }
