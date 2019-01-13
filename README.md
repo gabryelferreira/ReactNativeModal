@@ -220,3 +220,65 @@ const styles = {
   }
 }
 ```
+
+## Properties
+
+#### `visible`
+
+Values: boolean `false` (default) | `true`
+
+Specifies whether the modal should appear.
+
+#### `title`
+
+A string representing the modal title.
+
+#### `subTitle`
+
+A string representing the modal subtitle.
+
+#### `buttons`
+
+An array describing the key, text and color of each button on the modal.
+
+Example:
+```javascript
+buttons={[
+  {key: "BEST", text: "Best button", color: '#27ae60', fontWeight: 'bold'},
+  {key: "WORST", text: "Not a good button"}
+]}
+```
+
+Each object in the array should have:
+
+`key`: A variable representing the button key. The key is used when the user clicks the button, then this key is return in the `onClick` parameter;
+
+`text`: A string representing the button text in the modal;
+
+`color`: A string representing the button text color. Default is `'#222'`;
+
+`fontWeight`: A string representing the button text fontWeight. Default is `'bold'`;
+
+#### `onClick`
+
+This property calls a function that sends a key through parameter.
+
+Usage:
+
+```javascript
+onClick={(key) => this.functionOnModalClick(key)}
+```
+
+#### `onClose`
+
+This property calls a function when the modal is closed through back button or the default button (default button is the shown button when array of `buttons` property is empty).
+
+Usage:
+
+```javascript
+onClose={() => this.functionOnModalClose()}
+```
+
+### `buttonText`
+
+A string representing the button text when the `buttons` property is empty.
