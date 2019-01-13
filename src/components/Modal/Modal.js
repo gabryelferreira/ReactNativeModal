@@ -1,21 +1,6 @@
 import React, {Component} from 'react';
 import { Modal, Text, View, TouchableOpacity, Animated } from 'react-native';
 
-/* Modal parameters:
-
-    <Modalzin
-        visible={true}
-        title={"This is the Modal title"}
-        subtitle={"This is the Modal subtitle"},
-        buttons={[
-            {key: "FIRST_BUTTON_KEY", text: "First button text", color: '#27ae60', fontWeight: 'bold'},
-            {key: "SECOND_BUTTON_KEY", text: "Second button text"}
-        ]}
-        onClick={(key) => this.functionOnButtonClick(key)}
-        onClose={() => this.functionOnModalClose()}
-        buttonText={"Button text"}
-*/
-
 export default class Modalzin extends Component {
 
     renderButtons(){
