@@ -55,7 +55,7 @@ export default class Modalzin extends Component {
                                 <Text style={styles.title}>{this.props.title}</Text>
                             </View>
                             <View style={[styles.viewInfo, styles.paddingHorizontal]}>
-                                <Text style={styles.info}>{this.props.subTitle}</Text>
+                                <Text style={styles.info}>{this.props.subtitle}</Text>
                             </View>
 
                             <View style={styles.viewButtons}>
@@ -141,7 +141,7 @@ export default class App extends Component {
     modal: {
       visible: false,
       title: "Modal title",
-      subTitle: "Modal subTitle",
+      subtitle: "Modal subtitle",
       buttons: this.createButtons()
     }
   }
@@ -150,7 +150,7 @@ export default class App extends Component {
     super(props);
   }
 
-  functionOnModalClose(key){
+  functionOnModalClick(key){
     this.setState({
       modal: {
         visible: false
@@ -163,12 +163,20 @@ export default class App extends Component {
     }
   }
 
+  functionOnModalClose(){
+    this.setState({
+      modal: {
+        visible: false
+      }
+    });
+  }
+
   openModal(){
     this.setState({
       modal: {
         visible: true,
         title: "Modal title",
-        subTitle: "Modal subTitle",
+        subtitle: "Modal subtitle",
         buttons: this.createButtons()
       }
     })
@@ -176,7 +184,7 @@ export default class App extends Component {
 
   createButtons(){
     let buttons = [
-      {key: "BEST", text: "BEST button", color: '#27ae60', fontWeight: 'bold'},
+      {key: "BEST", text: "Best button", color: '#27ae60', fontWeight: 'bold'},
       {key: "WORST", text: "Not a good button"}
     ];
     return buttons;
@@ -188,9 +196,10 @@ export default class App extends Component {
       <Modalzin
         visible={this.state.modal.visible}
         title={this.state.modal.title}
-        subTitle={this.state.modal.subTitle}
+        subtitle={this.state.modal.subtitle}
         buttons={this.state.modal.buttons}
-        onClick={(key) => this.functionOnModalClose(key)}
+        onClick={(key) => this.functionOnModalClick(key)}
+        onClose={() => this.functionOnModalClose()}
       />
         <TouchableOpacity onPress={() => this.openModal()} style={styles.button}>
           <Text style={styles.buttonText}>Open modal</Text>
