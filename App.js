@@ -17,7 +17,7 @@ export default class App extends Component {
     super(props);
   }
 
-  functionOnModalClose(key){
+  functionOnModalClick(key){
     this.setState({
       modal: {
         visible: false
@@ -28,6 +28,14 @@ export default class App extends Component {
     } else {
       Alert.alert("Ok...", "Not a good button to click.");
     }
+  }
+
+  functionOnModalClose(){
+    this.setState({
+      modal: {
+        visible: false
+      }
+    });
   }
 
   openModal(){
@@ -57,7 +65,8 @@ export default class App extends Component {
         title={this.state.modal.title}
         subtitle={this.state.modal.subtitle}
         buttons={this.state.modal.buttons}
-        onClick={(key) => this.functionOnModalClose(key)}
+        onClick={(key) => this.functionOnModalClick(key)}
+        onClose={() => this.functionOnModalClose()}
       />
         <TouchableOpacity onPress={() => this.openModal()} style={styles.button}>
           <Text style={styles.buttonText}>Open modal</Text>
