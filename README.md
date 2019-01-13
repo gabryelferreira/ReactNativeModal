@@ -288,6 +288,6 @@ Usage:
 onClose={() => this.functionOnModalClose()}
 ```
 
-### `buttonText`
+#### `buttonText`
 
 A string representing the button text when the `buttons` property is empty.
